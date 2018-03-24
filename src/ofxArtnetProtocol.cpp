@@ -55,7 +55,7 @@ void ofxArtnetProtocol::begin(const char* ip)
     }
     udpConnection.SetNonBlocking(true);
 
-    ofLogNotice("ofxArtnetProtocol") << "artnet is successfully connected to: "+ofToString(ip)+" / post: "+ofToString(ART_NET_PORT);
+    ofLogNotice("ofxArtnetProtocol") << "artnet is successfully connected to: "+ofToString(ip)+" / port: "+ofToString(ART_NET_PORT);
 
     for (size_t i=0; i<sizeof(ART_NET_ID); i++) {
         packet.id[i] = ART_NET_ID[i];
